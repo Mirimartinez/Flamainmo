@@ -1,22 +1,27 @@
-/**
-* Template Name: EstateAgency - v4.7.0
-* Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 :root {
   --main-color: #03275c;
-  --secondary: #105ac9;
+  --secondary: #ffac11;
   --accent: #7c7c7c;
+  --light: #a7c4f0;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--accent);
+}
+@media (max-width: 700px) {
+  .container,
+  .intro,
+  .section-bg,
+  .bg-main,
+  .section-footer,
+  img:not(.nav-logo),
+  .section-md-t3 {
+    width: 50rem;
+  }
 }
 
 h1,
@@ -37,6 +42,21 @@ a:hover {
   color: var(--main-color);
   text-decoration: none;
 }
+
+/* .section-bg {
+  padding: 120px 0;
+  color: #fff;
+}
+.section-bg:before {
+  content: '';
+  background: var(--main-color);
+  position: absolute;
+  bottom: 60px;
+  top: 60px;
+  left: 0;
+  right: 0;
+  transform: skewY(5deg);
+} */
 
 .link-two {
   color: var(--main-color);
@@ -105,10 +125,14 @@ a:hover {
   color: var(--accent);
   font-size: 2rem;
   font-weight: 600;
+  /* margin-left: -40px; */
 }
 @media (max-width: 767px) {
   .text-brand {
     font-size: 1.8rem;
+  }
+  .horarios {
+    text-align: center;
   }
 }
 
@@ -164,14 +188,6 @@ a:hover {
   background-color: var(--main-color);
   z-index: 2;
 }
-.nav-logo {
-  margin: -1rem -7rem -1rem -7rem;
-}
-
-/* #navbar-options {
-  margin-right: -5rem;
-  margin-left: 4rem;
-} */
 
 /*------/ Bg Image /------*/
 .bg-image {
@@ -320,6 +336,12 @@ a:hover {
   font-weight: 600;
 }
 
+.title-b {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
 .title-link {
   font-size: 1.2rem;
   font-weight: 300;
@@ -402,7 +424,7 @@ a:hover {
 .carousel-pagination .swiper-pagination-bullet {
   width: 18px;
   height: 10px;
-  background-color: #555;
+  background-color: var(--light);
   margin: 0 4px;
   border-radius: 0;
   opacity: 1;
@@ -470,20 +492,20 @@ a:hover {
   right: 15px;
   bottom: 6rem;
   z-index: 996;
-  background: var(--main-color);
+  background: var(--secondary);
   width: 45px;
   height: 45px;
   border-radius: 50px;
   transition: all 0.4s;
 }
 .back-to-top i {
-  font-size: 28px;
-  color: #fff;
+  font-size: 35px;
+  color: var(--main-color);
+  font-weight: 800;
   line-height: 0;
 }
 .back-to-top:hover {
-  background: var(--secondary);
-  color: #fff;
+  background-color: var(--light);
 }
 .back-to-top.active {
   visibility: visible;
@@ -581,9 +603,9 @@ a:hover {
 --------------------------------------------------------------*/
 .navbar-default {
   transition: all 0.5s ease-in-out;
-  background-color: #ffffff;
-  padding-top: 28px;
-  padding-bottom: 28px;
+  background-color: #ffffffd0;
+  padding-top: 11px;
+  padding-bottom: 16px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   box-shadow: 1px 2px 15px rgba(100, 100, 100, 0.3);
@@ -591,6 +613,18 @@ a:hover {
 .navbar-default .nav-search {
   color: #000000;
   font-size: 1.5rem;
+}
+
+.nav-inmo {
+  margin-left: 0rem;
+}
+.nav-logo {
+  margin: -1.5rem 0 -1rem -5.5rem;
+  max-height: 6rem;
+}
+#navbar-options {
+  margin-right: -5.5rem;
+  margin-left: 4rem;
 }
 .navbar-default.navbar-reduce {
   box-shadow: 1px 2px 15px rgba(100, 100, 100, 0.3);
@@ -603,16 +637,16 @@ a:hover {
 .navbar-default.navbar-trans .nav-item,
 .navbar-default.navbar-reduce .nav-item {
   position: relative;
-  padding-right: 10px;
+  padding-right: -10px;
   padding-bottom: 8px;
-  margin-left: 0;
+  margin-left: 7px;
 }
 .navbar-toggle-box {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   line-height: 0;
-  padding: 10px;
+  padding: 5px;
 }
 .navbar-toggle-box i {
   line-height: 0;
@@ -620,7 +654,7 @@ a:hover {
 @media (min-width: 768px) {
   .navbar-default.navbar-trans .nav-item,
   .navbar-default.navbar-reduce .navbar-options .nav-item {
-    margin-left: 15px;
+    margin-left: 7px;
   }
 }
 .navbar-default.navbar-trans .nav-link,
@@ -681,8 +715,6 @@ a:hover {
 }
 .navbar-default.navbar-reduce {
   transition: all 0.5s ease-in-out;
-  padding-top: 19px;
-  padding-bottom: 19px;
 }
 .navbar-default.navbar-reduce .nav-link {
   color: var(--accent);
@@ -702,6 +734,7 @@ a:hover {
 .navbar-default.navbar-reduce .navbar-brand {
   color: var(--accent);
 }
+
 .navbar-default .dropdown .dropdown-menu {
   border-top: 0;
   border-left: 4px solid var(--main-color);
@@ -796,7 +829,8 @@ a:hover {
   transform: rotate(-135deg);
   opacity: 0.9;
 }
-
+@media screen and (min-width: 600px) {
+}
 /*======================================
 //--//-->   BOX COLAPSE
 ======================================*/
@@ -934,7 +968,7 @@ a:hover {
 }
 .intro .carousel-item-a {
   position: relative;
-  height: 100vh;
+  height: 50rem;
 }
 .intro .carousel-item-a.bg-image {
   background-attachment: scroll;
@@ -1050,6 +1084,9 @@ a:hover {
 .intro-single .title-single-box .title-single {
   font-weight: 600;
   font-size: 2.2rem;
+}
+.title-single-box {
+  margin-top: -5rem;
 }
 @media (min-width: 768px) {
   .intro-single .title-single-box .title-single {
@@ -1193,6 +1230,10 @@ a:hover {
   }
 }
 
+.card-box-a {
+  height: 18rem;
+}
+
 .card-overlay-a-content {
   transition: all 0.5s ease-in;
   position: absolute;
@@ -1312,6 +1353,221 @@ a:hover {
   border-color: #313131;
 }
 
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 15px 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #444444;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+}
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: #fff;
+  background: var(--secondary);
+}
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(17, 17, 17, 0.6);
+}
+.portfolio .portfolio-wrap::before {
+  content: '';
+  background: rgba(17, 17, 17, 0.6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+.portfolio .portfolio-wrap img {
+  transition: all ease-in-out 0.3s;
+}
+.portfolio .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+}
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
+.portfolio .portfolio-wrap .portfolio-links {
+  text-align: center;
+  z-index: 4;
+}
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 5px 0 0;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: #fff;
+}
+.portfolio .portfolio-wrap:hover::before {
+  opacity: 1;
+}
+.portfolio .portfolio-wrap:hover img {
+  transform: scale(1.2);
+}
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+}
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid var(--accent);
+}
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
+  background-color: var(--accent);
+}
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(17, 17, 17, 0.08);
+}
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+.portfolio-details .portfolio-info ul li + li {
+  margin-top: 1px;
+}
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+.property-single-carousel-pagination {
+  color: var(--secondary);
+}
+/*--------------------------------------------------------------
+# Frequently Asked Questions
+--------------------------------------------------------------*/
+.faq .faq-list {
+  padding: 0;
+  list-style: none;
+}
+.faq .faq-list li {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.faq .faq-list a {
+  display: block;
+  position: relative;
+  font-family: var(--accent);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-right: 25px;
+  cursor: pointer;
+}
+.faq .faq-list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.faq .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+.faq .faq-list .icon-show {
+  display: none;
+}
+.faq .faq-list a.collapsed {
+  color: #343a40;
+}
+.faq .faq-list a.collapsed:hover {
+  color: var(--accent);
+}
+.faq .faq-list a.collapsed .icon-show {
+  display: inline-block;
+}
+.faq .faq-list a.collapsed .icon-close {
+  display: none;
+}
+
 /*------/ Property Single /-----*/
 .gallery-property {
   margin-bottom: 3rem;
@@ -1358,6 +1614,47 @@ a:hover {
   }
 }
 
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 6px;
+  background: #252525;
+  transition: 0.3s;
+}
+.services .icon-box:hover {
+  background: #2b2b2b;
+}
+.services .icon-box i {
+  float: left;
+  color: var(--accent);
+  font-size: 40px;
+  line-height: 0;
+}
+.services .icon-box h4 {
+  margin-left: 70px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.services .icon-box h4 a {
+  color: #fff;
+  transition: 0.3s;
+}
+.services .icon-box h4 a:hover {
+  text-decoration: underline;
+}
+.services .icon-box .icon-box:hover h4 a {
+  color: var(--accent);
+}
+.services .icon-box p {
+  margin-left: 70px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
 /*======================================
 //--//-->   NEWS - CARD-B
 ======================================*/
@@ -1372,11 +1669,62 @@ a:hover {
   .card-header-b {
     bottom: 0px;
   }
+  .bancor-img {
+    padding-left: 20%;
+  }
+  .marti-img {
+    padding-left: 5rem;
+  }
+  .humed-img {
+    margin: 0 0 3rem 10rem;
+  }
 }
 @media (min-width: 992px) {
   .card-header-b {
     bottom: 20px;
   }
+}
+@media (max-width: 767px) {
+  .news-img-box {
+    height: 25rem;
+    padding-left: 0px;
+  }
+  .news-humedades {
+    margin-top: 5rem;
+    padding-right: 25%;
+  }
+  .news-nuevaley {
+    margin: 25rem 5rem 0rem 5rem;
+  }
+  .news-ley {
+    margin: 45rem 5rem 0rem 5rem;
+  }
+  .news-bancor {
+    margin: 17rem 5rem 0rem 5rem;
+  }
+  .news-marti {
+    margin: 10rem 5rem 0rem 5rem;
+  }
+  .bancor-img {
+    padding-left: 0%;
+  }
+}
+.img-box-b {
+  max-height: 17rem;
+  object-fit: fill;
+}
+
+.news-img {
+  object-fit: contain;
+}
+.news-humedades {
+  margin-left: 15%;
+}
+.martillero {
+  height: 20rem;
+}
+.card-title-b {
+  margin-bottom: -2rem;
 }
 .card-header-b .category-b {
   font-size: 0.9rem;
@@ -1433,11 +1781,11 @@ a:hover {
   line-height: 1.6;
 }
 .post-content .post-intro {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 4rem;
   line-height: 1.6;
-  color: #000000;
+  color: var(--main-color);
   font-weight: 400;
 }
 .post-content p {
@@ -1558,12 +1906,29 @@ a:hover {
   }
 }
 
+.bg-main {
+  background-color: var(--main-color);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  transform: skewY(5deg);
+  padding-top: 70px;
+  padding-bottom: 120px;
+}
+
+.bg-text {
+  transform: skewY(-5deg);
+}
+
 /*======================================
 //--//-->   AGENTS - CARD-D
 ======================================*/
 .card-box-d .card-overlay-hover {
   transition: all 0.2s ease-in-out;
   padding: 15px 40px 15px 35px;
+}
+.card-img-d {
+  object-fit: contain;
+  padding-left: 7rem;
 }
 @media (min-width: 768px) {
   .card-box-d .card-overlay-hover {
@@ -1578,6 +1943,11 @@ a:hover {
 @media (min-width: 1200px) {
   .card-box-d .card-overlay-hover {
     padding: 15px 40px 5px 35px;
+  }
+}
+@media (max-width: 767px) {
+  .card-img-d {
+    padding-left: 0rem;
   }
 }
 .card-box-d .title-d {
@@ -1816,6 +2186,184 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+}
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid var(--accent);
+}
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
+  background-color: var(--accent);
+}
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(17, 17, 17, 0.08);
+}
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+.portfolio-details .portfolio-info ul li + li {
+  margin-top: 10px;
+}
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info-box {
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 30px 0 32px 0;
+  border-radius: 4px;
+}
+.contact .info-box i {
+  font-size: 32px;
+  color: var(--accent);
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px dotted #f8d4d5;
+}
+.contact .info-box h3 {
+  font-size: 20px;
+  color: #777777;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.contact .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.contact .php-email-form {
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 30px;
+  border-radius: 4px;
+}
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .error-message br + br {
+  margin-top: 25px;
+}
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+.contact .php-email-form .loading:before {
+  content: '';
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+.contact .php-email-form .form-group {
+  margin-bottom: 25px;
+}
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: #111111;
+}
+.contact .php-email-form input {
+  padding: 10px 15px;
+}
+.contact .php-email-form textarea {
+  padding: 12px 15px;
+}
+.contact .php-email-form button[type='submit'] {
+  background: var(--main-color);
+  border: 0;
+  padding: 10px 32px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+.contact .php-email-form button[type='submit']:hover {
+  background: var(--secondary);
+}
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .form-as #sendmessage {
@@ -1945,7 +2493,7 @@ a:hover {
 .section-footer {
   padding-top: 60px;
   margin-top: 60px;
-  background: #f3f3f3;
+  background: var(--main-color);
 }
 .section-footer ul {
   line-height: 2;
@@ -1953,10 +2501,23 @@ a:hover {
 .section-footer .item-list-a i {
   font-size: 18px;
   padding-right: 4px;
-  color: var(--main-color);
+  color: var(--accent);
 }
 .section-footer .widget-a .w-title-a {
   margin-bottom: 1rem;
+}
+.follow {
+  text-align: center;
+  padding-top: 2.4rem;
+}
+.socialmedia {
+  margin-bottom: -2rem;
+}
+.socialmedia-a {
+  margin-left: -1rem;
+}
+.navbar-footer {
+  margin-left: 1px;
 }
 
 footer {
@@ -1977,7 +2538,7 @@ footer .credits {
   position: fixed;
   width: 45px;
   height: 45px;
-  bottom: 2rem;
+  bottom: 2.5rem;
   right: 15px;
   background-color: #25d366;
   color: #fff;

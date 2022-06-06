@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
 
     <title>FLAMÁ Inmobiliaria</title>
     <!--SEO-->
@@ -11,7 +12,7 @@
       name="description"
     />
     <meta
-      content="Inmobiliaria,alquiler,compra,venta,departamento,casa,propiedades,córdoba,alquilar en córdoba,alquiler en córdoba,alquileres en córdoba,alquilar depto,alquilar departamento,alquilar casa"
+      content="Inmobiliaria, alquiler,compra,venta,departamento,casa,propiedades,córdoba,alquilar en córdoba,alquiler en córdoba,alquileres en córdoba,alquilar depto,alquilar departamento,alquilar casa"
       name="keywords"
     />
     <meta name="robots" content="index" />
@@ -55,15 +56,19 @@
     <script src="https://cdn.rawgit.com/peterkhayes/multisort/master/multisort.js"></script>
   </head>
 
+  <!-- BUSCAR REAL ESTATE Y COMENZAR PROYECTO PARA 
+    VER RESPONSIVE EN INDEX -->
+
   <body>
+    <!-- <div class="container full-container col-12"> -->
     <!-- ======= Header/Navbar ======= -->
     <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
       <div class="container">
         <div nav-1>
           <img class="nav-logo" src="./assets/img/logoinmo2.png" />
-          <a class="navbar-brand nav-inmo text-brand" href="index.html"
+          <!-- <a target="_blank" class="navbar-brand nav-inmo text-brand" href="index.html"
             >FLAMÁ<span class="color-b">Inmobiliaria</span></a
-          >
+          > -->
         </div>
         <div id="navbar-options">
           <div
@@ -72,48 +77,24 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">Principal</a>
+                <a target="" class="nav-link active" href="index.html"
+                  >Principal</a
+                >
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="property-grid.html">Propiedades</a>
+                <a target="" class="nav-link" href="property-grid.html"
+                  >Propiedades</a
+                >
               </li>
               <!-- Abre pestaña nueva? -->
               <li class="nav-item">
-                <a class="nav-link" href="about.html">Novedades</a>
+                <a class="nav-link" href="actualizar.html">Novedades</a>
               </li>
               <!-- Dónde redirigir?? -->
               <li class="nav-item">
-                <a class="nav-link" href="blog-grid.html">Ayuda</a>
+                <a class="nav-link" href="actualizar.html">Ayuda</a>
               </li>
-
-              <!-- ALTERNATIVA: MENÚ DESPLEGABLE
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          >Pages</a
-        >
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="property-single.html"
-            >Property Single</a
-          >
-          <a class="dropdown-item" href="blog-single.html">Blog Single</a>
-          <a class="dropdown-item" href="agents-grid.html">Agents Grid</a>
-          <a class="dropdown-item" href="agent-single.html"
-            >Agent Single</a
-          >
-        </div>
-      </li> -->
-
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contacto</a>
-              </li> -->
             </ul>
           </div>
         </div>
@@ -130,139 +111,83 @@
           <span></span>
           <span></span>
         </button>
-        <!-- <button
-          type="button"
-          class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo01"
-        >
-          <i class="bi bi-search"></i>
-        </button> -->
       </div>
     </nav>
     <!-- End Header/Navbar -->
 
     <main id="main">
-      <!-- ======= Breadcrumbs ======= -->
-      <section class="breadcrumbs">
+      <!-- ======= Intro Single ======= -->
+      <section class="intro-single">
         <div class="container">
-          <ol>
-            <li><a href="index.html">Inicio</a></li>
-            <li>Propiedades</li>
-          </ol>
-          <h2 style="margin-top: 3rem" class="title-a color-b">Detalles</h2>
-        </div>
-      </section>
-      <!-- End Breadcrumbs -->
-
-      <!-- ======= Portfolio Details Section ======= -->
-      <section id="portfolio-details" class="portfolio-details">
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-lg-8">
-              <div class="portfolio-details-slider swiper">
-                <div class="swiper-wrapper align-items-center">
-                  <div class="swiper-slide">
-                    <img src="./assets/img/" alt="" />
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
+          <div class="row">
+            <div class="col-md-12 col-lg-8">
+              <div class="title-single-box">
+                <h1 class="title-single">SE ENCUENTRA VIGENTE LA LEY PROVINCIAL 10281.
+                </h1>
+                <span class="color-text-a">EPEC</span>
               </div>
             </div>
-
-            <div class="col-lg-4">
-              <div class="portfolio-info">
-                <h3>Información</h3>
-                <ul>
-                  <li><strong>Tipo</strong>:</li>
-                  <li><strong>Superficie</strong>: mts<sup>2</sup></li>
-                  <li><strong>Dormitorios</strong>:</li>
-                  <li><strong>Baños</strong>:</li>
-                </ul>
-              </div>
-              <div class="portfolio-description">
-                <h2></h2>
-                <p></p>
-              </div>
+            <div class="col-md-12 col-lg-4">
+              <nav
+                aria-label="breadcrumb"
+                class="breadcrumb-box d-flex justify-content-lg-end"
+              >
+                <!-- <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="#">Home</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Book Cover Deisgn
+                  </li>
+                </ol> -->
+              </nav>
             </div>
           </div>
         </div>
       </section>
-      <!-- End Portfolio Details Section -->
+      <!-- End Intro Single-->
 
-      <!-- ANOTHER ONE BITES THE DUST -->
-      <section class="section-t8 section-bg">
-        <div class="container" data-aos="fade-up">
-          <div id="property-carousel" class="swiper" style="margin-top: -2rem">
-            <div class="swiper-wrapper">
-              <div class="carousel-item-b swiper-slide">
-                <div class="card-box-a card-shadow">
-                  <div class="img-box-a">
-                    <img src="assets/img/" alt="" class="img-a img-fluid" />
-                  </div>
-                </div>
+      <!-- ======= Blog Single ======= -->
+      <section class="news-single nav-arrow-b">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="news-img-box mb-3">
+                <img src="assets/img/noticias/LEY PROVINCIAL 10281.jpg" alt="" class="img-fluid  news-img"/>
               </div>
-              <!-- End carousel item -->
-              <div class="carousel-item-b swiper-slide">
-                <div class="card-box-a card-shadow">
-                  <div class="img-box-a">
-                    <img src="assets/img/" alt="" class="img-a img-fluid" />
-                  </div>
-                </div>
-              </div>
-              <!-- End carousel item -->
-              <div class="carousel-item-b swiper-slide">
-                <div class="card-box-a card-shadow">
-                  <div class="img-box-a">
-                    <img src="assets/img/" alt="" class="img-a img-fluid" />
-                  </div>
-                </div>
-              </div>
-              <!-- End carousel item -->
-              <div class="carousel-item-b swiper-slide">
-                <div class="card-box-a card-shadow">
-                  <div class="img-box-a">
-                    <img src="assets/img/" alt="" class="img-a img-fluid" />
-                  </div>
-                </div>
-              </div>
-              <!-- End carousel item -->
-              <div class="carousel-item-b swiper-slide">
-                <div class="card-box-a card-shadow">
-                  <div class="img-box-a">
-                    <img src="assets/img/" alt="" class="img-a img-fluid" />
-                  </div>
-                </div>
-              </div>
-              <!-- End carousel item -->
-              <div class="carousel-item-b swiper-slide">
-                <div class="card-box-a card-shadow">
-                  <div class="img-box-a">
-                    <img src="assets/img/" alt="" class="img-a img-fluid" />
-                  </div>
-                </div>
-              </div>
-              <!-- End carousel item -->
-              <div class="carousel-item-b swiper-slide">
-                <div class="card-box-a card-shadow">
-                  <div class="img-box-a">
-                    <img src="assets/img/" alt="" class="img-a img-fluid" />
-                  </div>
-                </div>
-              </div>
-              <!-- End carousel item -->
-              <div class="carousel-item-b swiper-slide">
-                <div class="card-box-a card-shadow">
-                  <div class="img-box-a">
-                    <img src="assets/img/" alt="" class="img-a img-fluid" />
-                  </div>
-                </div>
-              </div>
-              <!-- End carousel item -->
+            </div>
+
+            <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+              <div class="post-content color-text-a mt-5">
+                <p class="post-intro news-ley">
+                    Para acceder al servicio eléctrico, toda instalación deberá contar con un CERTIFICADO DE INSTALACIÓN ELÉCTRICA APT, el mismo deberá ser expedido por un electricista habilitado al usuario.<br><br>
+                    En qué casos se debera presentar ??<br>
+                    💡 Ante el pedido de conexión<br>
+                    💡 Instalaciones existentes: anteriores a la entrada de vigencia de la ley que sean objeto de reanudación del servicio.<br>
+                    💡Ante la reanudación del servicio, cuando ocurra luego de los dos años de una certificación previa<br>
+                    💡 Que por su estado impliquen evidente riesgo<br>
+                    💡Que sean objeto de modificaciones o ampliaciones<br>
+                    (Entre otros casos)<br><br>
+
+                    MUY IMPORTANTE!<br>
+                    Quien es propietario debe efectuar las respectivas obras segun dicha ley para entregar a Locatario/a un inmueble apto para el destino sea vivienda o comercio.
+                </p>          
+                <blockquote class="blockquote">
+                    <p class="mb-4">
+                        Si querés comprar, vender, tasar <br>
+                        Comunicate 3512914719 - 351263663.
+                    </p>
+                    <footer class="blockquote-footer">
+                      <strong>Inmo Flamá</strong>
+                      <cite title="Source Title"></cite>
+                    </footer>
+                  </blockquote>                    
+              </div>             
             </div>
           </div>
         </div>
       </section>
+      <!-- End Blog Single-->
     </main>
     <!-- End #main -->
 
