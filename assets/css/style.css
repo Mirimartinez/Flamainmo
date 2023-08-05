@@ -12,6 +12,11 @@ body {
   font-family: 'Poppins', sans-serif;
   color: var(--accent);
 }
+*{
+  box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
 @media (max-width: 700px) {
   .container,
   .intro,
@@ -162,11 +167,77 @@ a:hover {
   color: #fff;
 }
 
+.fs20{
+  font-size: 20px;
+}
 .no-margin {
   margin: 0;
 }
 
+nav {
+  max-height: 4.7rem;
+}
+
+/* VENDIDO */
+
+.ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #db3434;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 25px 0;
+  background-color: #db3434;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.381);
+  color: #fff;
+  /* font: 700 18px/1 'Lato', sans-serif; */
+  font-weight: 800;
+  font-size: larger;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* top right*/
+.ribbon-top-right {
+  top: -10px;
+  right: -10px;
+}
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.ribbon-top-right::before {
+  top: 0;
+  left: 0;
+}
+.ribbon-top-right::after {
+  bottom: 0;
+  right: 0;
+}
+.ribbon-top-right span {
+  left: -25px;
+  top: 30px;
+  transform: rotate(45deg);
+}
+
+
+
 /*------/ Nav Pills  /------*/
+
 .nav-pills-a {
   text-decoration: none;
 }
@@ -604,8 +675,6 @@ a:hover {
 .navbar-default {
   transition: all 0.5s ease-in-out;
   background-color: #ffffffd0;
-  padding-top: 11px;
-  padding-bottom: 16px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   box-shadow: 1px 2px 15px rgba(100, 100, 100, 0.3);
@@ -619,8 +688,7 @@ a:hover {
   margin-left: 0rem;
 }
 .nav-logo {
-  margin: -0.8rem 0 -1rem -5.5rem;
-  max-height: 6rem;
+  max-height: 4.5rem;
 }
 #navbar-options {
   margin-right: -5.5rem;
@@ -1536,7 +1604,6 @@ a:hover {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: var(--accent);
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -2375,6 +2442,20 @@ a:hover {
   }
 }
 
+.form-group textarea{
+  resize: none;
+}
+
+/*--------------------------------------------------------------
+# Proyecto Section
+--------------------------------------------------------------*/
+.proyecto-title{
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 4rem 0;
+}
+
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -2503,7 +2584,7 @@ a:hover {
 # Footer
 --------------------------------------------------------------*/
 .section-footer {
-  padding-top: 60px;
+  padding-top: 40px;
   margin-top: 60px;
   background: var(--main-color);
 }
@@ -2534,127 +2615,6 @@ a:hover {
 .horarios {
   margin-top: -0.42rem;
 }
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="viewport" content="width=device-width">
-
-
-    <title>FLAMÁ Inmobiliaria</title>
-    <!--SEO-->
-    <meta
-      content="inmo Flamá es una inmobiliaria con mas de 50 años que alquila, vende y administra propiedades en Córdoba Capital."
-      name="description"
-    />
-    <meta
-      content="inmo flama, inmobiliaria flama, Inmobiliaria, inmo, alquiler, compra, venta, departamento, casa, propiedades, córdoba,alquilar en córdoba,alquiler en córdoba, comprar en córdoba, comprar depto, comprar departamento, comprar casa"
-      name="keywords"
-    />
-    <meta name="robots" content="index" />
-    <meta name="robots" content="ALL" />
-
-    <link rel="canonical" href="https://mirianamartinez.online" />
-
-    <!-- Favicons -->
-    <link href="/assets/img/favicon.png" rel="icon" />
-    <link href="/assets/img/favicon.png" rel="apple-touch-icon" />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
-      rel="stylesheet"
-    />
-
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
-
-    <!-- Whatsapp web-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <!-- Multisort -->
-    <script src="https://cdn.rawgit.com/peterkhayes/multisort/master/multisort.js"></script>
-  </head>
-
-  <!-- BUSCAR REAL ESTATE Y COMENZAR PROYECTO PARA 
-    VER RESPONSIVE EN INDEX -->
-
-  <body>
-  <!-- <div class="container full-container col-12"> -->
-    <!-- ======= Header/Navbar ======= -->
-    <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
-      <div class="container">
-        <div nav-1>
-          <a href="index.html"><img class="nav-logo" src="./assets/img/logoinmo2.png" />
-          </a>
-          <a target="_blank" style="color: rgba(240, 248, 255, 0);" href="index.html"
-            >FLAMÁ<span style="color: rgba(240, 248, 255, 0);">Inmobiliaria</span></a
-          >
-        </div>
-        <div id="navbar-options">
-          <div
-            class="navbar-collapse collapse justify-content-center"
-            id="navbarDefault"
-          >
-            <ul class="navbar-nav">
-              <li>
-                <h1 style="color: rgba(240, 248, 255, 0);">inmobiliaria flama</h1>
-              </li>
-              <li class="nav-item">
-                <a target="" class="nav-link active" href="index.html">Principal</a>
-              </li>
-
-              <li class="nav-item">
-                <a target="" class="nav-link " href="property-grid.html">Propiedades</a>
-              </li>
-              <!-- Abre pestaña nueva? -->
-              <li class="nav-item">
-                <a  class="nav-link" href="actualizar.html">Novedades</a>
-              </li>
-              <!-- Dónde redirigir?? -->
-              <li class="nav-item">
-                <a  class="nav-link" href="actualizar.html">Ayuda</a>
-              </li>
-
-              
-            </ul>
-          </div>
-        </div>
-        <button
-          class="navbar-toggler collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarDefault"
-          aria-controls="navbarDefault"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        
-      </div>
-    </nav>
-    <!-- End Header/Navbar -->
-
 footer {
   background: #f3f3f3;
   text-align: center;
