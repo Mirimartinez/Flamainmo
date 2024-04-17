@@ -27,6 +27,23 @@ padding: 0;
   .section-md-t3 {
     width: 50rem;
   } */
+  #bannerAlq{
+    display: none;
+  }
+}
+@media (min-width: 701px) {
+  /* .container,
+  .intro,
+  .section-bg,
+  .bg-main,
+  .section-footer,
+  img:not(.nav-logo),
+  .section-md-t3 {
+    width: 50rem;
+  } */
+  #bannerAlqMobile{
+    display: none;
+  }
 }
 
 h1,
