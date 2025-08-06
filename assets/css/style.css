@@ -731,6 +731,7 @@ nav {
 #navbar-options {
   margin-right: -5.5rem;
   margin-left: 4rem;
+  margin: 1.2rem 0 0 0 ;
 }
 .navbar-default.navbar-reduce {
   box-shadow: 1px 2px 15px rgba(100, 100, 100, 0.3);
@@ -2001,6 +2002,7 @@ width: fit-content;
 }
 
 /*------/ Comments /------*/
+
 .box-comments .list-comments li {
   padding-bottom: 3.5rem;
 }
@@ -2019,6 +2021,10 @@ width: fit-content;
   .box-comments .list-comments .comment-author {
     font-size: 1.5rem;
   }
+.ms-lg-6{
+  margin-left: 9rem;  
+}
+
 }
 .box-comments .list-comments .comment-details {
   display: table-cell;
