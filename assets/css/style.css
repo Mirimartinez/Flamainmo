@@ -66,6 +66,23 @@ a:hover {
   text-decoration: none;
 }
 
+.tour360 {
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+.tour-btn{
+  border-radius: 17px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+   }
+
+   .tour-btn-img {
+  width: 250px;
+  margin: -1px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
 /* .section-bg {
   padding: 120px 0;
   color: #fff;
