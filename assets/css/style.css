@@ -1942,6 +1942,9 @@ width: fit-content;
   margin-left: 17.5rem;
 }
  */
+ .carousel-item-d {
+  margin-right: 1rem;
+}
 @media (max-width: 767px) {
   .news-img-box {
     height: 25rem;
